@@ -6,22 +6,26 @@ const certifications = [
   {
     title: "Cloud Computing",
     issuer: "IIT Bombay",
-    certificateUrl: "", // Users can add PDF link here
+    imageUrl: "/images/cert-cloud.png", // Example: Path to your certificate image
+    certificateUrl: "/downloads/cert-cloud.pdf", // Example: Path to your downloadable PDF
   },
   {
     title: "Cyber Security",
     issuer: "IIT Bombay",
-    certificateUrl: "",
+    imageUrl: "/images/cert-cyber.png",
+    certificateUrl: "/downloads/cert-cyber.pdf",
   },
   {
     title: "C Programming",
     issuer: "AIICE",
-    certificateUrl: "",
+    imageUrl: "/images/cert-c-programming.png",
+    certificateUrl: "/downloads/cert-c-programming.pdf",
   },
   {
     title: "Writing in the Sciences",
     issuer: "Coursera (Stanford University)",
-    certificateUrl: "",
+    imageUrl: "/images/cert-writing-sciences.png",
+    certificateUrl: "/downloads/cert-writing-sciences.pdf",
   },
 ];
 
@@ -43,31 +47,38 @@ const CertificationSection = () => {
         >
           Certifications
         </motion.h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {certifications.map((cert, index) => (
+        <div className="grid md:grid-cols-2 gap-8">
+          {certifications.map((cert) => (
             <motion.div
-              key={index}
+              key={cert.title}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.1 * index }}
-              className="backdrop-blur-sm bg-card/50 border border-border p-6 rounded-2xl hover:border-foreground transition-all duration-300 group shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1"
+              transition={{ duration: 0.3 }}
+              className="flex flex-col backdrop-blur-sm bg-card/50 border border-border p-6 rounded-2xl hover:border-foreground transition-all duration-300 group shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1"
             >
-              <Award className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors duration-300 mb-4" />
-              <h3 className="text-xl font-semibold text-foreground mb-2">{cert.title}</h3>
-              <p className="text-muted-foreground mb-4">{cert.issuer}</p>
+              <div className="flex-grow">
+                <Award className="w-10 h-10 text-muted-foreground group-hover:text-foreground transition-colors duration-300 mb-4" />
+                <h3 className="text-xl font-semibold text-foreground mb-2">{cert.title}</h3>
+                <p className="text-muted-foreground mb-4">{cert.issuer}</p>
+                {cert.imageUrl && (
+                  <div className="my-4 rounded-lg overflow-hidden border border-border/50">
+                    <img src={cert.imageUrl} alt={`Certificate for ${cert.title}`} className="w-full h-auto object-contain" />
+                  </div>
+                )}
+              </div>
               {cert.certificateUrl ? (
                 <Button 
+                  asChild
                   variant="outline" 
                   size="sm" 
-                  className="w-full"
-                  onClick={() => window.open(cert.certificateUrl, '_blank')}
+                  className="w-full mt-4"
                 >
-                  <FileText className="w-4 h-4 mr-2" />
-                  View Certificate
-                </Button>
-              ) : (
-                <p className="text-xs text-muted-foreground italic">Certificate PDF not added yet</p>
-              )}
+                  <a href={cert.certificateUrl} download={cert.title}>
+                    <FileText className="w-4 h-4 mr-2" />
+                    Download Certificate
+                  </a>
+                </Button>                
+              ) : null}
             </motion.div>
           ))}
         </div>

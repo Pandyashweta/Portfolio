@@ -75,12 +75,12 @@ const CareerSection = () => {
             <h3 className="text-3xl font-semibold text-foreground">Education</h3>
           </div>
           <div className="space-y-6">
-            {education.map((edu, index) => (
+            {education.map((edu) => (
               <motion.div
-                key={index}
+                key={edu.degree}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 * index }}
+                transition={{ delay: 0.1 }}
                 className="backdrop-blur-sm bg-card/50 border border-border p-6 rounded-2xl hover:border-foreground transition-all duration-300 group shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1"
               >
                 <span className="text-sm text-muted-foreground">{edu.period}</span>
@@ -102,12 +102,12 @@ const CareerSection = () => {
             {/* Timeline line with glow */}
             <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-foreground/50 via-foreground/30 to-transparent" />
             
-            {experiences.map((exp, index) => (
+            {experiences.map((exp) => (
               <motion.div 
-                key={index}
+                key={exp.role + exp.company}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 * index }}
+                transition={{ delay: 0.1 }}
                 className="relative border-l-2 border-border pl-8 pb-8 hover:border-foreground transition-colors duration-300 group"
               >
                 {/* Timeline dot */}

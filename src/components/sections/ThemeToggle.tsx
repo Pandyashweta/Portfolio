@@ -1,31 +1,44 @@
-import { Moon, Sun, Waves } from "lucide-react";
 import { useTheme } from "next-themes";
-
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { motion } from "framer-motion";
 
 export function ThemeToggle() {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
+
+  const themes = [
+    { name: "light", style: "bg-neutral-200 border-neutral-400" },
+    { name: "dark", style: "bg-neutral-800 border-neutral-600" },
+  ];
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon" className="fixed top-4 right-4 z-50">
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}><Sun className="mr-2 h-4 w-4" />Light</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}><Moon className="mr-2 h-4 w-4" />Dark</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("wavy")}><Waves className="mr-2 h-4 w-4" />Wavy</DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className="fixed top-6 right-6 z-50 flex items-center gap-3 p-2 rounded-full backdrop-blur-sm bg-card/30 border border-border/50 shadow-lg">
+      {themes.map((t) => (
+        <button
+          key={t.name}
+          onClick={() => setTheme(t.name)}
+          className={`w-6 h-6 rounded-full transition-all duration-300 relative focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background focus:ring-foreground/50 ${t.style}`}
+          aria-label={`Switch to ${t.name} theme`}
+        >
+          {theme === t.name && (
+            <motion.div
+              layoutId="activeTheme"
+              className="absolute inset-0 rounded-full border-2 border-foreground"
+              initial={{
+                opacity: 0,
+                scale: 1.2,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              }}
+            />
+          )}
+        </button>
+      ))}
+    </div>
   );
 }
