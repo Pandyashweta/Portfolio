@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Github, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const projects = [
   {
@@ -6,18 +8,27 @@ const projects = [
     period: "Jan 2025 – Feb 2025",
     description: "Created a modern, retro-inspired personal portfolio website using React, HTML5, CSS3, and JavaScript. Features include dynamic project showcase, animated visuals, and seamless navigation for enhanced user experience. Optimized for mobile and desktop device responsiveness.",
     tech: ["React", "HTML5", "CSS3", "JavaScript"],
+    // Example: Add your image path relative to the `public` folder
+    imageUrl: "/images/portfolio-preview.png", 
+    // Link to your GitHub repository for this project
+    githubUrl: "https://github.com/Pandyashweta/your-portfolio-repo-name", 
   },
   {
     title: "UI/UX Intern Projects – SriSri Tech",
     period: "Oct 2025 – Present",
     description: "Developed prototypes and wireframes for web and mobile products. Conducted user research and usability testing to inform design decisions. Improved retention and engagement metrics through intuitive layouts and design thinking.",
     tech: ["Figma", "Wireframing", "User Research", "Design Thinking"],
+    imageUrl: "/images/ui-ux-preview.png",
+    // Example: Add a link to a downloadable file (e.g., a PDF or ZIP of your designs)
+    downloadUrl: "/downloads/ui-ux-designs.zip",
   },
   {
     title: "Image Processing Tools – Innovate2Automate",
     period: "Nov 2024 – Present",
     description: "Developed image analysis applications utilizing Java, Node.js, and ImageJ for scientific and business use-cases. Integrated scalable data pipelines and remote database solutions. Collaborated with R&D teams to validate and optimize product functionality.",
     tech: ["Java", "Node.js", "ImageJ", "Data Pipelines"],
+    imageUrl: "/images/image-processing-preview.png",
+    githubUrl: "https://github.com/Pandyashweta/image-processing-repo-name",
   },
 ];
 
@@ -60,6 +71,28 @@ const ProjectsSection = () => {
                   </span>
                 ))}
               </div>
+              {/* Image and Links Section */}
+              {project.imageUrl && (
+                <div className="mt-6 space-y-4">
+                  <img 
+                    src={project.imageUrl} 
+                    alt={`Preview of ${project.title}`} 
+                    className="rounded-lg border border-border/50 w-full object-cover"
+                  />
+                  <div className="flex gap-4">
+                    {project.githubUrl && (
+                      <Button asChild variant="outline" size="sm">
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"><Github className="w-4 h-4 mr-2" /> View Code</a>
+                      </Button>
+                    )}
+                    {project.downloadUrl && (
+                      <Button asChild variant="outline" size="sm">
+                        <a href={project.downloadUrl} download><Download className="w-4 h-4 mr-2" /> Download Asset</a>
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>

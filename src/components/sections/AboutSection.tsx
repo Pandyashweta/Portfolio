@@ -55,7 +55,7 @@ const AboutSection = () => {
         >
           <h1 className="text-[clamp(4rem,12vw,10rem)] font-bold text-foreground leading-[0.95] mb-8 tracking-tight relative">
             <span className="inline-block relative">
-              Design
+              Shweta
               <motion.span
                 className="absolute -inset-4 bg-foreground/5 blur-2xl -z-10"
                 animate={{
