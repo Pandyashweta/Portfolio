@@ -1,60 +1,81 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, Download, BookOpen, ExternalLink } from "lucide-react";
+import { Github, BookOpen, ExternalLink, Pencil, Paintbrush, BrainCircuit, LayoutGrid, Link, Figma } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
   {
     category: "coding",
     title: "Interactive Portfolio Website",
-    period: "Jan – Feb 2024",
     description: "A modern, retro-inspired personal portfolio built with React and Framer Motion. Features a dynamic project showcase, animated visuals, and a seamless, responsive user experience.",
-    tech: ["React", "HTML5", "CSS3", "JavaScript"],
-    imageUrl: "/images/portfolio-preview.png", 
+    tech: ["React", "TypeScript", "TailwindCSS", "Framer Motion"],
+    imageUrl: "/images/projects/portfolio-website.png", // Using your local screenshot
     githubUrl: "https://github.com/Pandyashweta/Portfolio",
-    liveUrl: "#", // Link to the live site
+    liveUrl: "https://shwetapandya.vercel.app/", // Link to the live site
   },
   {
     category: "coding",
     title: "Image Processing Tools – Innovate2Automate",
-    period: "Nov 2023 – Present",
     description: "Developed image analysis applications using Java, Node.js, and ImageJ. Integrated scalable data pipelines and collaborated with R&D teams to optimize product functionality.",
     tech: ["Java", "Node.js", "ImageJ", "Data Pipelines"],
-    imageUrl: "/images/image-processing-preview.png",
+    imageUrl: "/images/projects/image-processing.png",
     githubUrl: "https://github.com/Pandyashweta/",
   },
   {
-    category: "art",
-    title: "Digital Illustration Series",
-    period: "2023",
-    description: "A collection of digital paintings exploring the intersection of nature and technology, created using Procreate with a focus on vibrant colors and atmospheric lighting.",
-    tech: ["Procreate", "Digital Painting", "Concept Art"],
-    imageUrl: "/images/art-preview.png", // Replace with your art image
-    downloadUrl: "/downloads/art-collection.zip", // Optional: link to high-res images
+    category: "UI/UX Design",
+    title: "Histopedia - Android and Web App",
+    description: "Designed a comprehensive UI/UX for 'Histopedia', an application for both Android and web. Focused on creating an intuitive and engaging user experience for exploring historical content.",
+    tech: ["Figma", "UI/UX Design", "Wireframing", "Prototyping"],
+    figmaUrl: "https://www.figma.com/community/file/1557710145700902956",
+    driveUrl: "#", // Replace with your Drive link
   },
   {
     category: "writings",
-    title: "The Impact of Design Systems on Team Collaboration",
-    period: "May 2023",
-    description: "An in-depth article on the benefits and challenges of implementing a design system in a fast-paced development environment, published on a popular tech blog.",
-    tech: ["Technical Writing", "UX Strategy", "Design Systems"],
-    articleUrl: "https://example.com/your-article-link", // Replace with the actual link
+    title: "My Writings",
+    description: "A collection of articles and posts on technology, design, and personal growth.",
+    tech: ["Blogging", "Technical Writing"],
+    driveUrl: "#", // Replace with your Drive link
   },
   {
     category: "research",
-    title: "Usability Study for a New Mobile App",
-    period: "Oct 2023 – Present",
-    description: "Led a usability study for a new mobile app at SriSri Tech. Conducted user interviews, created wireframes, and analyzed feedback to inform design iterations, increasing task completion rates by 20%.",
-    tech: ["Figma", "Wireframing", "User Research", "Usability Testing"],
-    imageUrl: "/images/ui-ux-preview.png",
-    downloadUrl: "/downloads/research-summary.pdf", // Link to your research paper or summary
+    title: "Research Projects",
+    description: "Academic and personal research projects and papers.",
+    tech: ["Scientific Research", "Data Analysis"],
+    driveUrl: "#", // Replace with your Drive link
   },
 ];
 
-const categories = ["coding", "art", "writings", "research"];
+const categories = ["UI/UX Design", "coding", "art", "writings", "research"];
+
+const artCategories = [
+  {
+    title: "Pencil",
+    description: "A collection of my traditional pencil sketches and drawings.",
+    icon: Pencil,
+    driveUrl: "#", // Replace with your Google Drive link
+  },
+  {
+    title: "Digital",
+    description: "Digital paintings and illustrations created with various tools.",
+    icon: Paintbrush,
+    driveUrl: "#", // Replace with your Google Drive link
+  },
+  {
+    title: "AI",
+    description: "Explorations and projects using AI-powered art generation.",
+    icon: BrainCircuit,
+    driveUrl: "#", // Replace with your Google Drive link
+  },
+  {
+    title: "Graphic Design",
+    description: "Logos, branding, and other graphic design work.",
+    icon: LayoutGrid,
+    driveUrl: "#", // Replace with your Google Drive link
+  },
+];
 
 const ProjectsSection = () => {
-  const [activeCategory, setActiveCategory] = useState("coding");
+  const [activeCategory, setActiveCategory] = useState("UI/UX Design");
 
   const filteredProjects = projects.filter(
     (project) => project.category === activeCategory
@@ -73,9 +94,9 @@ const ProjectsSection = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-5xl font-bold text-foreground"
+          className="text-5xl font-bold text-foreground capitalize"
         >
-          Featured Projects
+          Projects
         </motion.h2>
 
         {/* Category Tabs */}
@@ -102,7 +123,7 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        <div className="space-y-8 min-h-[400px]">
+        <div className="min-h-[400px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeCategory}
@@ -110,64 +131,67 @@ const ProjectsSection = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="space-y-8"
             >
-              {filteredProjects.map((project) => (
-                <motion.div
-                  key={project.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
-                  className="backdrop-blur-sm bg-card/50 border border-border p-8 rounded-2xl hover:border-foreground transition-all duration-300 group shadow-[0_8px_32px_rgba(0,0,0,0.2)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] hover:-translate-y-1"
-                >
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-semibold text-foreground group-hover:text-foreground transition-colors">{project.title}</h3>
-                    <span className="text-sm text-muted-foreground whitespace-nowrap ml-4">{project.period}</span>
-                  </div>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span key={tech} className="text-xs bg-accent/80 backdrop-blur-sm border border-border/50 px-3 py-1.5 rounded-full text-foreground">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  {/* Image and Links Section */}
-                  {(project.imageUrl || project.githubUrl || project.downloadUrl || project.articleUrl) && (
-                    <div className="mt-6 space-y-4">
-                      {project.imageUrl && (
-                        <img 
-                          src={project.imageUrl} 
-                          alt={`Preview of ${project.title}`} 
-                          className="rounded-lg border border-border/50 w-full object-cover"
-                        />
-                      )}
-                      <div className="flex gap-4 pt-2">
-                        {project.githubUrl && (
-                          <Button asChild variant="outline" size="sm">
-                            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"><Github className="w-4 h-4 mr-2" /> View Code</a>
-                          </Button>
-                        )}
-                    {project.liveUrl && (
-                      <Button asChild variant="outline" size="sm">
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"><ExternalLink className="w-4 h-4 mr-2" /> View Website</a>
-                      </Button>
-                    )}
-                        {project.downloadUrl && (
-                          <Button asChild variant="outline" size="sm">
-                            <a href={project.downloadUrl} download><Download className="w-4 h-4 mr-2" /> Download Asset</a>
-                          </Button>
-                        )}
-                        {project.articleUrl && (
-                          <Button asChild variant="outline" size="sm">
-                            <a href={project.articleUrl} target="_blank" rel="noopener noreferrer"><BookOpen className="w-4 h-4 mr-2" /> Read Article</a>
-                          </Button>
-                        )}
+              {activeCategory === "art" ? (
+                <div className="grid md:grid-cols-2 gap-8">
+                  {artCategories.map((art) => (
+                    <motion.div
+                      key={art.title}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
+                      className="flex flex-col text-center backdrop-blur-sm bg-card/50 border border-border p-8 rounded-2xl hover:border-foreground transition-all duration-300 group shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1"
+                    >
+                      <div className="flex-grow flex flex-col items-center">
+                        <art.icon className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors duration-300 mb-4" />
+                        <h3 className="text-xl font-semibold text-foreground mb-2">{art.title}</h3>
+                        <p className="text-muted-foreground">{art.description}</p>
                       </div>
+                      <Button asChild variant="outline" size="sm" className="mt-6">
+                        <a href={art.driveUrl} target="_blank" rel="noopener noreferrer">
+                          <Link className="w-4 h-4 mr-2" /> View Link
+                        </a>
+                      </Button>
+                    </motion.div>
+                  ))}
+                </div>
+              ) : (
+                <>
+                  {filteredProjects.length > 0 ? (
+                    <div className="space-y-8">
+                      {filteredProjects.map((project) => (
+                        <motion.div
+                          key={project.title}
+                          className="backdrop-blur-sm bg-card/50 border border-border p-8 rounded-2xl hover:border-foreground transition-all duration-300 group shadow-[0_8px_32px_rgba(0,0,0,0.2)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] hover:-translate-y-1"
+                        >
+                          <div className="flex justify-between items-start mb-4">
+                            <h3 className="text-2xl font-semibold text-foreground group-hover:text-foreground transition-colors">{project.title}</h3>
+                          </div>
+                          <p className="text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
+                          {project.tech && project.tech.length > 0 && (
+                            <div className="flex flex-wrap gap-2">
+                              {project.tech.map((tech) => (
+                                <span key={tech} className="text-xs bg-accent/80 backdrop-blur-sm border border-border/50 px-3 py-1.5 rounded-full text-foreground">{tech}</span>
+                              ))}
+                            </div>
+                          )}
+                          <div className="mt-6 flex gap-4 pt-2">
+                            {project.githubUrl && <Button asChild variant="outline" size="sm"><a href={project.githubUrl} target="_blank" rel="noopener noreferrer"><Github className="w-4 h-4 mr-2" /> View Code</a></Button>}
+                            {project.figmaUrl && <Button asChild variant="outline" size="sm"><a href={project.figmaUrl} target="_blank" rel="noopener noreferrer"><Figma className="w-4 h-4 mr-2" /> Figma Design</a></Button>}
+                            {project.liveUrl && <Button asChild variant="outline" size="sm"><a href={project.liveUrl} target="_blank" rel="noopener noreferrer"><ExternalLink className="w-4 h-4 mr-2" /> View Website</a></Button>}
+                            {project.driveUrl && <Button asChild variant="outline" size="sm"><a href={project.driveUrl} target="_blank" rel="noopener noreferrer"><Link className="w-4 h-4 mr-2" /> View Drive</a></Button>}
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-center py-16">
+                      <h3 className="text-2xl font-semibold text-foreground mb-2">Coming Soon!</h3>
+                      <p className="text-muted-foreground">This section is currently under construction.</p>
                     </div>
                   )}
-                </motion.div>
-              ))}
+                </>
+              )}
             </motion.div>
           </AnimatePresence>
         </div>

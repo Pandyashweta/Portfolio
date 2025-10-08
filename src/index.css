@@ -8,100 +8,7 @@
 
 @layer base {
   :root {
-    /* Refined dark portfolio theme with depth */
-    --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 7%;
-
-    --secondary: 0 0% 85%;
-    --secondary-foreground: 0 0% 7%;
-
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 98%;
-
-    --radius: 1.5rem;
-
-    /* Enhanced navigation tokens - iPad-like dock */
-    --nav-bg: hsl(0 0% 15% / 0.7);
-    --nav-active: hsl(0 0% 25% / 0.8);
-    --nav-text: hsl(0 0% 98%);
-    --nav-border: hsl(0 0% 98% / 0.1);
-    
-    /* Subtle gradients for depth */
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 7%) 0%, hsl(0 0% 10%) 100%);
-    --gradient-overlay: linear-gradient(135deg, hsl(0 0% 15% / 0.3) 0%, hsl(0 0% 7% / 0.1) 100%);
-    
-    /* Shadows for elevation */
-    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.15);
-    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.2);
-    --shadow-strong: 0 8px 32px hsl(0 0% 0% / 0.3);
-    --shadow-glow: 0 0 60px hsl(0 0% 98% / 0.08);
-    --shadow-inset: inset 0 2px 12px hsl(0 0% 0% / 0.4);
-    
-    /* Animation tokens */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-    
-    /* Glass morphism */
-    --glass-bg: hsl(0 0% 15% / 0.4);
-    --glass-border: hsl(0 0% 98% / 0.1);
-    
-    /* Depth layers */
-    --depth-1: hsl(0 0% 12%);
-    --depth-2: hsl(0 0% 14%);
-    --depth-3: hsl(0 0% 16%);
-  }
- 
-  .dark {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 7%;
-
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
-
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 98%;
-  } 
-
-  .light {
+    /* Light theme variables (default) */
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 
@@ -129,7 +36,52 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
-  } 
+
+    --radius: 1.5rem;
+
+    /* Navigation tokens for light theme */
+    --nav-bg: hsl(0 0% 95% / 0.7);
+    --nav-active: hsl(0 0% 100% / 0.8);
+    --nav-text: hsl(240 10% 3.9%);
+    --nav-border: hsl(240 5.9% 10% / 0.1);
+  }
+ 
+  .dark {
+    /* Dark theme variables */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 7%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 98%;
+    
+    /* Navigation tokens for dark theme */
+    --nav-bg: hsl(0 0% 15% / 0.7);
+    --nav-active: hsl(0 0% 25% / 0.8);
+    --nav-text: hsl(0 0% 98%);
+    --nav-border: hsl(0 0% 98% / 0.1);
+  }
 
   * {
     @apply border-border;
@@ -145,7 +97,6 @@
   .text-balance {
     text-wrap: balance;
   }
-  
   .gradient-text {
     @apply bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent;
   }

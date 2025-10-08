@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   const themes = [
     { name: "light", style: "bg-neutral-200 border-neutral-400" },
@@ -18,7 +18,7 @@ export function ThemeToggle() {
           className={`w-6 h-6 rounded-full transition-all duration-300 relative focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background focus:ring-foreground/50 ${t.style}`}
           aria-label={`Switch to ${t.name} theme`}
         >
-          {theme === t.name && (
+          {resolvedTheme === t.name && (
             <motion.div
               layoutId="activeTheme"
               className="absolute inset-0 rounded-full border-2 border-foreground"
