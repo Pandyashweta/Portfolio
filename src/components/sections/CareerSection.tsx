@@ -32,7 +32,7 @@ const experiences = [
   {
     period: "Apr 2025 – Present",
     role: "Assistant Level (Part-Time)",
-    company: "Vetro",
+    company: "Vetro – Parth Bus Services",
     description: "Responsible for part-time data maintenance and supporting operational efficiency through systematic data management and process support.",
   },
   {
