@@ -11,7 +11,7 @@ const BottomNav = ({ activeTab, onTabChange }: BottomNavProps) => {
     { id: "projects", label: "Projects" },
     { id: "career", label: "Career" },
     { id: "certification", label: "Certification" },
-    { id: "upcoming", label: "Upcoming" },
+    { id: "connect", label: "Connect" },
   ];
 
   return (

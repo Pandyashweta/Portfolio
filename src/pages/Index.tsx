@@ -20,8 +20,8 @@ const Index = () => {
         return <CareerSection key="career" />;
       case "certification":
         return <CertificationSection key="certification" />;
-      case "upcoming":
-        return <DraftSection key="upcoming" />;
+      case "connect":
+        return <DraftSection key="connect" />;
       default:
         return <AboutSection key="about" />;
     }
