@@ -6,7 +6,8 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
     <NextThemesProvider 
       attribute="class"
       enableSystem={false}
-      {...props}>
+      {...props}
+    >
       {children}
     </NextThemesProvider>
   );

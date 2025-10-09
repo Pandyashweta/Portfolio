@@ -11,7 +11,7 @@ const projects = [
     tech: ["React", "TypeScript", "TailwindCSS", "Framer Motion"],
     imageUrl: "/images/projects/portfolio-website.png", // Using your local screenshot
     githubUrl: "https://github.com/Pandyashweta/Portfolio",
-    liveUrl: "https://shwetapandya.vercel.app/", // Link to the live site
+    liveUrl: "https://portfolio-gamma-hazel-59.vercel.app/",
   },
   {
     category: "coding",
@@ -27,14 +27,14 @@ const projects = [
     description: "Designed a comprehensive UI/UX for 'Histopedia', an application for both Android and web. Focused on creating an intuitive and engaging user experience for exploring historical content.",
     tech: ["Figma", "UI/UX Design", "Wireframing", "Prototyping"],
     figmaUrl: "https://www.figma.com/community/file/1557710145700902956",
-    driveUrl: "#", // Replace with your Drive link
+    driveUrl: "https://drive.google.com/drive/folders/1XnTT8h0UAnhJe23wGQIq4y7zzdfx-_GZ?usp=drive_link",
   },
   {
     category: "writings",
     title: "My Writings",
     description: "A collection of articles and posts on technology, design, and personal growth.",
     tech: ["Blogging", "Technical Writing"],
-    driveUrl: "#", // Replace with your Drive link
+    driveUrl: "https://drive.google.com/drive/folders/1CXdsPO0Vk2S6-Z324z0iuijCjL0nMYW5?usp=drive_link",
   },
   {
     category: "research",
@@ -52,25 +52,25 @@ const artCategories = [
     title: "Pencil",
     description: "A collection of my traditional pencil sketches and drawings.",
     icon: Pencil,
-    driveUrl: "#", // Replace with your Google Drive link
+    driveUrl: "https://drive.google.com/drive/folders/1jaRnYf_JyXo2Tku6gwBydEFvqiY9IuI0?usp=sharing",
   },
   {
     title: "Digital",
     description: "Digital paintings and illustrations created with various tools.",
     icon: Paintbrush,
-    driveUrl: "#", // Replace with your Google Drive link
+    driveUrl: "https://drive.google.com/drive/folders/1eu9KetFjusDN_iKyCX0dRbTaHOEjYIKy?usp=sharing",
   },
   {
     title: "AI",
     description: "Explorations and projects using AI-powered art generation.",
     icon: BrainCircuit,
-    driveUrl: "#", // Replace with your Google Drive link
+    driveUrl: "https://drive.google.com/drive/folders/19jHsQJKLlEEK9jb92FFW6vJVbaPlK1rV?usp=sharing",
   },
   {
     title: "Graphic Design",
     description: "Logos, branding, and other graphic design work.",
     icon: LayoutGrid,
-    driveUrl: "#", // Replace with your Google Drive link
+    driveUrl: "https://drive.google.com/drive/folders/1HfbjYcN3K3bb5SmRJ9-s9dqO-ho9Kzrg?usp=sharing",
   },
 ];
 
