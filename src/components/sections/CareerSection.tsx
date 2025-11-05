@@ -30,7 +30,7 @@ const experiences = [
     description: "Develop market analysis tools leveraging Java, Node.js, and ImageJ to enhance data accuracy and decision-making. Build scalable, efficient applications using full-stack development and cloud technologies. Collaborate with cross-functional teams to deliver impactful software solutions.",
   },
   {
-    period: "Apr 2025 – Present",
+    period: "Apr 2025 – Oct 2025",
     role: "Assistant Level (Part-Time)",
     company: "Parth Bus Services",
     description: "Responsible for part-time data maintenance and supporting operational efficiency through systematic data management and process support.",
@@ -42,7 +42,7 @@ const experiences = [
     description: "Supporting business operations and contributing to strategic initiatives and operational workflows.",
   },
   {
-    period: "Nov 2025 – Present",
+    period: "Nov 2025 – Oct 2025",
     role: "Full Stack Developer Intern",
     company: "Sri Sri Tech",
     description: "Developing full-stack solutions and contributing to web development projects.",
