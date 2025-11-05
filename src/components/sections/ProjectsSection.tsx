@@ -9,8 +9,8 @@ const projects = [
     title: "Interactive Portfolio Website",
     description: "A modern, retro-inspired personal portfolio built with React and Framer Motion. Features a dynamic project showcase, animated visuals, and a seamless, responsive user experience.",
     tech: ["React", "TypeScript", "TailwindCSS", "Framer Motion"],
-    imageUrl: "/images/projects/portfolio-website.png", // Using your local screenshot
-    githubUrl: "https://github.com/Pandyashweta/Portfolio",
+    imageUrl: "/images/projects/portfolio-website.png",
+    githubUrl: "https://github.com/Pandya/Portfolio",
     liveUrl: "https://portfolio-gamma-hazel-59.vercel.app/",
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     description: "Developed image analysis applications using Java, Node.js, and ImageJ. Integrated scalable data pipelines and collaborated with R&D teams to optimize product functionality.",
     tech: ["Java", "Node.js", "ImageJ", "Data Pipelines"],
     imageUrl: "/images/projects/image-processing.png",
-    githubUrl: "https://github.com/Pandyashweta/",
+    githubUrl: "https://github.com/Pandya/",
   },
   {
     category: "UI/UX Design",

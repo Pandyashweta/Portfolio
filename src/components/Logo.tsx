@@ -18,8 +18,7 @@ const Logo = () => {
       />
       <div className="text-foreground">
         <h2 className="text-xl font-bold leading-tight tracking-tight">
-          Pandya<br />
-          Shweta
+          Pandya <br /> 
         </h2>
       </div>
     </motion.div>

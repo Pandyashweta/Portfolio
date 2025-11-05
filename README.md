@@ -3,7 +3,7 @@
 A modern, retro-inspired personal portfolio built with React, TypeScript, and Framer Motion. It features a dynamic project showcase, smooth page transitions, and a clean, responsive user experience designed to highlight skills, projects, and career journey.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://portfolio-gamma-hazel-59.vercel.app/)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?style=for-the-badge)](https://github.com/Pandyashweta/Portfolio)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?style=for-the-badge)](https://github.com/Pandya/Portfolio)
 
 ---
 
@@ -40,7 +40,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 1.  **Clone the repository:**
     ```sh
-    git clone https://github.com/Pandyashweta/Portfolio.git
+    git clone https://github.com/Pandya/Portfolio.git
     cd Portfolio
     ```
 
@@ -89,4 +89,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ---
 
-Crafted with ❤️ by Shweta Pandya.
+Crafted with ❤️ by Pandya.
