@@ -10,8 +10,36 @@ const projects = [
     description: "A modern, retro-inspired personal portfolio built with React and Framer Motion. Features a dynamic project showcase, animated visuals, and a seamless, responsive user experience.",
     tech: ["React", "TypeScript", "TailwindCSS", "Framer Motion"],
     imageUrl: "/images/projects/portfolio-website.png",
-    githubUrl: "https://github.com/Pandya/Portfolio",
+    githubUrl: "https://github.com/Pandyashweta/Portfolio",
     liveUrl: "https://portfolio-gamma-hazel-59.vercel.app/",
+  },
+  {
+    category: "coding",
+    title: "Python Project Vault",
+    description: "A collection of various Python projects showcasing different libraries and applications, from data analysis to web scraping.",
+    tech: ["Python", "Data Analysis", "Web Scraping", "Automation"],
+    imageUrl: "/images/projects/python-vault.png", // Placeholder image
+    githubUrl: "https://github.com/Pandyashweta/pyproject", // Placeholder URL
+    liveUrl: "https://pyproject-delta.vercel.app/",
+  },
+  {
+    category: "coding",
+    title: "Fitness App (Level Up)",
+    description: "A mobile fitness application designed to help users track workouts, set goals, and monitor progress with an intuitive interface.",
+    tech: ["React Native", "Firebase", "HealthKit Integration", "UI/UX"],
+    imageUrl: "/images/projects/fitness-app.png", // Placeholder image
+    githubUrl: "https://github.com/Pandyashweta/LevelUpFitnessApp", // Placeholder URL
+    liveUrl: "",
+  },
+  /*
+  {
+    category: "coding",
+    title: "App Vault",
+    description: "A curated collection of small, helpful utility applications designed to enhance productivity and simplify daily tasks for users.",
+    tech: ["React", "Node.js", "Microservices", "Utility Apps"],
+    imageUrl: "/images/projects/app-vault.png", // Placeholder image
+    githubUrl: "https://github.com/Pandyashweta/AppVault", // Placeholder URL
+    liveUrl: "",
   },
   {
     category: "coding",
@@ -21,6 +49,7 @@ const projects = [
     imageUrl: "/images/projects/image-processing.png",
     githubUrl: "https://github.com/Pandya/",
   },
+  /*/
   {
     category: "UI/UX Design",
     title: "Histopedia - Android and Web App",
@@ -41,7 +70,7 @@ const projects = [
     title: "Research Projects",
     description: "Academic and personal research projects and papers.",
     tech: ["Scientific Research", "Data Analysis"],
-    driveUrl: "#", // Replace with your Drive link
+    driveUrl: "https://drive.google.com/drive/folders/1kj56dPqHkPTiTVo8b1qEXYZWSsworLet?usp=drive_link",
   },
 ];
 
@@ -52,25 +81,25 @@ const artCategories = [
     title: "Pencil",
     description: "A collection of my traditional pencil sketches and drawings.",
     icon: Pencil,
-    driveUrl: "https://drive.google.com/drive/folders/1jaRnYf_JyXo2Tku6gwBydEFvqiY9IuI0?usp=sharing",
+    driveUrl: "https://drive.google.com/drive/folders/1jaRnYf_JyXo2Tku6gwBydEFvqiY9IuI0?usp=drive_link",
   },
   {
     title: "Digital",
     description: "Digital paintings and illustrations created with various tools.",
     icon: Paintbrush,
-    driveUrl: "https://drive.google.com/drive/folders/1eu9KetFjusDN_iKyCX0dRbTaHOEjYIKy?usp=sharing",
+    driveUrl: "https://drive.google.com/drive/folders/1eu9KetFjusDN_iKyCX0dRbTaHOEjYIKy?usp=drive_link",
   },
   {
     title: "AI",
     description: "Explorations and projects using AI-powered art generation.",
     icon: BrainCircuit,
-    driveUrl: "https://drive.google.com/drive/folders/19jHsQJKLlEEK9jb92FFW6vJVbaPlK1rV?usp=sharing",
+    driveUrl: "https://drive.google.com/drive/folders/19jHsQJKLlEEK9jb92FFW6vJVbaPlK1rV?usp=drive_link",
   },
   {
     title: "Graphic Design",
     description: "Logos, branding, and other graphic design work.",
     icon: LayoutGrid,
-    driveUrl: "https://drive.google.com/drive/folders/1HfbjYcN3K3bb5SmRJ9-s9dqO-ho9Kzrg?usp=sharing",
+    driveUrl: "https://drive.google.com/drive/folders/1HfbjYcN3K3bb5SmRJ9-s9dqO-ho9Kzrg?usp=drive_link",
   },
 ];
 
