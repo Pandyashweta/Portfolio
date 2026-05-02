@@ -2,18 +2,18 @@
 
 A modern, retro-inspired personal portfolio built with React, TypeScript, and Framer Motion. It features a dynamic project showcase, smooth page transitions, and a clean, responsive user experience designed to highlight skills, projects, and career journey.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://portfolio-gamma-hazel-59.vercel.app/)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?style=for-the-badge)](https://github.com/Pandya/Portfolio)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://portfolio-pi-ivory-68.vercel.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?style=for-the-badge)](https://github.com/Pandyashweta/Portfolio)
 
 ---
 
-![Portfolio Screenshot](./public/images/projects/portfolio-website.png)
+![Portfolio Screenshot](./public/images/projects/home-page-screenshot.png)
 
 ## ✨ Features
 
 - **Sleek, Modern UI**: A clean and visually appealing design with a retro-futuristic aesthetic.
 - **Smooth Page Transitions**: Uses `framer-motion` for elegant animations and seamless navigation between sections.
-- **Dynamic Project Showcase**: A filterable gallery to showcase projects across different categories like UI/UX, coding, art, and research.
+- **Dynamic Project Showcase**: A filterable gallery to showcase projects across different categories like UI/UX, coding, and research.
 - **Responsive Design**: A mobile-first approach ensuring a great experience on all devices, from desktops to smartphones.
 - **Theming**: Switch between a crisp light mode and a sleek dark mode.
 - **Interactive Timeline**: An animated, glowing timeline to present career and education history in an engaging way.
@@ -23,9 +23,13 @@ A modern, retro-inspired personal portfolio built with React, TypeScript, and Fr
 
 - **React**: A JavaScript library for building user interfaces.
 - **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
-- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-- **Framer Motion**: A production-ready motion library for React.
 - **Vite**: A next-generation frontend tooling that provides a faster and leaner development experience.
+- **React Router**: A standard library for routing in React applications.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **shadcn/ui**: A collection of re-usable components built using Radix UI and Tailwind CSS.
+- **Framer Motion**: A production-ready motion library for React.
+- **Tanstack Query**: A powerful library for data fetching, caching, and server state management.
+- **Lucide React**: A beautiful and consistent icon toolkit.
 
 ## 🛠️ Getting Started
 
@@ -40,7 +44,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 1.  **Clone the repository:**
     ```sh
-    git clone https://github.com/Pandya/Portfolio.git
+    git clone https://github.com/Pandyashweta/Portfolio.git
     cd Portfolio
     ```
 
@@ -66,7 +70,7 @@ This portfolio is designed to be easily customizable. Most of the content can be
 
 - **About Section**: Modify the text directly in `src/components/sections/AboutSection.tsx`.
 - **Career & Education**: Update the `experiences` and `education` arrays in `src/components/sections/CareerSection.tsx`.
-- **Projects**: Add or modify project objects in the `projects` and `artCategories` arrays in `src/components/sections/ProjectsSection.tsx`.
+- **Projects**: Add or modify project objects in the `projects` array in `src/components/sections/ProjectsSection.tsx`.
 - **Certifications**: Update the `certifications` array in `src/components/sections/CertificationSection.tsx`.
 - **Contact Links**: Change the URLs in `src/components/sections/DraftSection.tsx`.
 

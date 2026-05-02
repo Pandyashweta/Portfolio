@@ -3,49 +3,39 @@ import { GraduationCap, Briefcase } from "lucide-react";
 
 const education = [
   {
-    period: "Aug 2024 – May 2026 (Expected)",
-    degree: "MSc. in Information Technology",
-    institution: "The Maharaja Sayajirao University, Vadodara",
-    description: "Advanced coursework in software engineering, cloud infrastructure, cybersecurity, and big data analytics.",
+    period: "Jul 2024 – May 2026",
+    degree: "Master of Information Technology (IT)",
+    institution: "The Maharaja Sayajirao University of Baroda",
+    summary: "Master’s degree in Information Technology with a focus on databases, network security, software development, and IT project management.",
+    activities: "Participated in multiple hackathon programs and collaborated under faculty guidance on projects involving technologies such as image processing.",
   },
   {
-    period: "Aug 2021 – May 2024",
-    degree: "BSc. (Hons.) in Environmental Science",
-    institution: "The Maharaja Sayajirao University, Vadodara",
-    description: "Multidisciplinary insights into sustainability, research, and industry trends.",
+    period: "Jul 2021 – May 2024",
+    degree: "Bachelor of Science – BS, Environmental Science",
+    institution: "The Maharaja Sayajirao University of Baroda",
+    summary: "Bachelor’s in Environmental Science, gaining practical exposure to fieldwork, research, sustainability, and ecological systems.",
+    activities: "Showcased research on microplastics in fertilizers, explaining their environmental impact and demonstrating samples under a microscope at an Open House event.",
   },
 ];
 
 const experiences = [
   {
-    period: "Apr 2023 – Jul 2024",
-    role: "Research Intern",
-    company: "The Maharaja Sayajirao University, Vadodara",
-    description: "Conducted research focused on developing organic bioplastics, gaining hands-on experience in laboratory and field methodologies. Enhanced scientific understanding and contributed to research publications and process improvement.",
-  },
-  {
-    period: "Sep 2024 – Feb 2025",
-    role: "Intern",
-    company: "Innovate2Automate – Vadodara, Gujarat",
-    description: "Develop market analysis tools leveraging Java, Node.js, and ImageJ to enhance data accuracy and decision-making. Build scalable, efficient applications using full-stack development and cloud technologies. Collaborate with cross-functional teams to deliver impactful software solutions.",
+    period: "Jul 2025 – Present",
+    role: "Business Operations & Technology Associate",
+    company: "Beyond Labs · California, United States (Remote)",
+    description: "Handled business operations and day-to-day management, supported technology-related tasks and documentation, worked on client projects, and continuously improved UI/UX design skills through hands-on learning and execution.",
   },
   {
     period: "Apr 2025 – Oct 2025",
-    role: "Assistant Level (Part-Time)",
-    company: "Parth Bus Services",
-    description: "Responsible for part-time data maintenance and supporting operational efficiency through systematic data management and process support.",
+    role: "Data Entry Assistant",
+    company: "Vatero bath + kitchen · Vadodara, Gujarat, India (Hybrid)",
+    description: "As an assistant to the respective team member, I handled daily data entry tasks, including maintaining, managing, and updating records throughout my tenure.",
   },
   {
-    period: "Jul 2025 – Present",
-    role: "Business Associate & Operations Intern",
-    company: "Beyond Labs",
-    description: "Supporting business operations and contributing to strategic initiatives and operational workflows.",
-  },
-  {
-    period: "Nov 2025 – Oct 2025",
-    role: "Full Stack Developer Intern",
-    company: "Sri Sri Tech",
-    description: "Developing full-stack solutions and contributing to web development projects.",
+    period: "Sep 2024 – Feb 2025",
+    role: "Software Engineer Intern (Backend)",
+    company: "Innovate2Automate Technologies Pvt Ltd · Bengaluru, Karnataka, India (Remote)",
+    description: "Developed and delivered data-driven software solutions using Java, Node.js, and ImageJ to enhance market analysis and decision-making.",
   },
 ];
 
@@ -87,11 +77,14 @@ const CareerSection = () => {
               >
                 {/* Timeline dot */}
                 <div className="absolute left-0 top-2 w-3 h-3 rounded-full bg-border group-hover:bg-foreground group-hover:scale-125 transition-all duration-300 shadow-glow" />
-                <div className="backdrop-blur-sm bg-card/30 border border-border/50 rounded-xl p-6 group-hover:border-foreground/50 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1">
+                <div className="backdrop-blur-sm bg-card/30 border border-border/50 rounded-xl p-6 group-hover:border-foreground/50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
                   <span className="text-sm text-muted-foreground mb-1 block">{edu.period}</span>
                   <h4 className="text-2xl font-semibold text-foreground mt-2">{edu.degree}</h4>
                   <p className="text-lg text-secondary-foreground mb-2">{edu.institution}</p>
-                  <p className="text-muted-foreground">{edu.description}</p>
+                  <p className="text-muted-foreground mb-4">{edu.summary}</p>
+                  <p className="text-sm text-muted-foreground border-l-2 border-border/80 pl-4 italic">
+                    <strong className="font-semibold not-italic text-secondary-foreground">Activities & Societies:</strong> {edu.activities}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -126,7 +119,7 @@ const CareerSection = () => {
                         : 'bg-border group-hover:bg-foreground group-hover:scale-125'
                     }`} 
                   />
-                <div className="backdrop-blur-sm bg-card/30 border border-border/50 rounded-xl p-6 group-hover:border-foreground/50 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1">
+                <div className="backdrop-blur-sm bg-card/30 border border-border/50 rounded-xl p-6 group-hover:border-foreground/50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
                   <span className="text-sm text-muted-foreground mb-1 block">{exp.period}</span>
                   <h4 className="text-2xl font-semibold text-foreground mt-2">{exp.role}</h4>
                   <p className="text-lg text-secondary-foreground mb-2">{exp.company}</p>

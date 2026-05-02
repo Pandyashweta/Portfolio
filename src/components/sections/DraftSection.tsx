@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Figma, FileText } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram, FileText } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -8,7 +8,7 @@ const ContactSection = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.5 }}
-      className="h-screen flex items-center justify-center px-8 pb-32"
+      className="min-h-screen flex items-center justify-center px-8 pb-32"
     >
       <div className="max-w-3xl text-center space-y-12">
         
@@ -31,8 +31,8 @@ const ContactSection = () => {
         
         <div className="flex justify-center gap-4 pt-8">
           <a 
-            href="mailto:teampandyas@gmail.com"
-            className="w-16 h-16 rounded-2xl backdrop-blur-xl bg-card/50 border border-border/50 hover:border-foreground hover:bg-card/80 transition-all duration-300 flex items-center justify-center group shadow-[0_4px_16px_rgba(0,0,0,0.2)]"
+            href="mailto:pandyashweta.in@gmail.com"
+            className="w-16 h-16 rounded-2xl backdrop-blur-xl bg-card/50 border border-border/50 hover:border-foreground hover:bg-card/80 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl"
             aria-label="Email"
           >
             <Mail className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors" />
@@ -41,7 +41,7 @@ const ContactSection = () => {
             href="https://www.linkedin.com/in/shwetapandya001/"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-16 h-16 rounded-2xl backdrop-blur-xl bg-card/50 border border-border/50 hover:border-foreground hover:bg-card/80 transition-all duration-300 flex items-center justify-center group shadow-[0_4px_16px_rgba(0,0,0,0.2)]"
+            className="w-16 h-16 rounded-2xl backdrop-blur-xl bg-card/50 border border-border/50 hover:border-foreground hover:bg-card/80 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl"
             aria-label="LinkedIn"
           >
             <Linkedin className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors" />
@@ -50,25 +50,25 @@ const ContactSection = () => {
             href="https://github.com/Pandyashweta"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-16 h-16 rounded-2xl backdrop-blur-xl bg-card/50 border border-border/50 hover:border-foreground hover:bg-card/80 transition-all duration-300 flex items-center justify-center group shadow-[0_4px_16px_rgba(0,0,0,0.2)]"
+            className="w-16 h-16 rounded-2xl backdrop-blur-xl bg-card/50 border border-border/50 hover:border-foreground hover:bg-card/80 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl"
             aria-label="GitHub"
           >
             <Github className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors" />
           </a>
           <a 
-            href="https://www.figma.com/@teamps"
+            href="https://www.instagram.com/pandyashwetaa"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-16 h-16 rounded-2xl backdrop-blur-xl bg-card/50 border border-border/50 hover:border-foreground hover:bg-card/80 transition-all duration-300 flex items-center justify-center group shadow-[0_4px_16px_rgba(0,0,0,0.2)]"
-            aria-label="Figma"
+            className="w-16 h-16 rounded-2xl backdrop-blur-xl bg-card/50 border border-border/50 hover:border-foreground hover:bg-card/80 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl"
+            aria-label="Instagram"
           >
-            <Figma className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors" />
+            <Instagram className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors" />
           </a>
           <a 
-            href="https://drive.google.com/drive/folders/1tw_UGU2NfT_xDUaqeGv1RhykcVwMursb?usp=drive_link"
+            href="https://drive.google.com/file/d/1BLmGQaZA0cyL2yPhi6-PMjQG0BdnWmfI/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-16 h-16 rounded-2xl backdrop-blur-xl bg-card/50 border border-border/50 hover:border-foreground hover:bg-card/80 transition-all duration-300 flex items-center justify-center group shadow-[0_4px_16px_rgba(0,0,0,0.2)]"
+            className="w-16 h-16 rounded-2xl backdrop-blur-xl bg-card/50 border border-border/50 hover:border-foreground hover:bg-card/80 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl"
             aria-label="Resume"
           >
             <FileText className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors" />
